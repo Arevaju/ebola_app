@@ -15,7 +15,7 @@ vars <- c(
   "Probable cases" = "Probable cases",
   "Suspected cases" = "Suspected cases"
 )
-shinyUI(navbarPage("Ebola Dashboard Tool", id="nav", fluid = TRUE, inverse = TRUE, collapsable = TRUE, responsive = TRUE,
+shinyUI(navbarPage("Ebola Dashboard Tool", id="nav", fluid = TRUE, inverse = TRUE, collapsible = TRUE, 
               
       tabPanel("Interactive map",
                             div(class="outer",
@@ -41,7 +41,7 @@ shinyUI(navbarPage("Ebola Dashboard Tool", id="nav", fluid = TRUE, inverse = TRU
                                            )
                                 ),
                                 
-                                absolutePanel(id = "controls", class = "modal", fixed = TRUE, draggable = TRUE,
+                                absolutePanel(id = "controls", class = "panel panel-default", fixed = TRUE, draggable = TRUE,
                                               top = 60, left = "auto", right = 20, bottom = "auto",
                                               width = 330, height = "auto",
                                               
@@ -61,9 +61,9 @@ shinyUI(navbarPage("Ebola Dashboard Tool", id="nav", fluid = TRUE, inverse = TRU
                                 )
                             ),          
   tabPanel("Distribution Charts",  
- wellPanel( 
-   div(class="span4", img(src="logo_randbee.png", height = 300, width = 350,  bg = 'transparent')
-   ),
+#  wellPanel( 
+#     div(class="span4", img(src="logo_randbee.png", height = 300, width = 350,  bg = 'transparent')
+#     ),
    
    div(class="row", 
        div(class="span3",
@@ -84,7 +84,8 @@ shinyUI(navbarPage("Ebola Dashboard Tool", id="nav", fluid = TRUE, inverse = TRU
        
        
        
-   )),
+   #)
+   ),
  div(class="row", 
        div(class="span8", 
                showOutput ("line0", "highcharts")
@@ -106,7 +107,7 @@ shinyUI(navbarPage("Ebola Dashboard Tool", id="nav", fluid = TRUE, inverse = TRU
     tabPanel("About", 
              HTML("<br> Data source updated by <a href = 'https://data.hdx.rwlabs.org/dataset/rowca-ebola-cases#' target='_blank'>OCHA ROWCA</a> every working day."),
              HTML("<br><br>"),
-             HTML("Application developed by <a href = 'http://randbee.com' target='_blank'>Randbee inspired by Joe Cheng.</a>") 
+             HTML("Application developed by <a href = 'http://randbe.es' target='_blank'>Randbee Consultants inspired by Joe Cheng.</a>") 
              )  
   )
 )
